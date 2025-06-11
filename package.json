@@ -1,0 +1,31 @@
+{
+	"name": "base-resources",
+	"private": true,
+	"version": "1.0.0",
+	"description": "Base structure with reusable classes to create CRUD modules using abstraction in entities, repositories, services, controllers and routes.",
+	"main": "index.js",
+	"scripts": {
+		"test": "pnpm -r run test",
+		"lint": "pnpm -r run lint",
+		"build": "pnpm -r run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MatheusFerreira71/base-resources.git"
+	},
+	"keywords": ["abstraction", "crud", "lib", "prisma", "reusable", "typeorm"],
+	"author": "Matheus Ferreira",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/MatheusFerreira71/base-resources/issues"
+	},
+	"homepage": "https://github.com/MatheusFerreira71/base-resources#readme",
+	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
+		"@types/node": "^24.0.1",
+		"reflect-metadata": "^0.2.2",
+		"typeorm": "^0.3.24",
+		"typescript": "^5.8.3",
+		"vitest": "^3.2.3"
+	}
+}

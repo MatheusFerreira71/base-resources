@@ -1,0 +1,18 @@
+{
+	"name": "@orm-kit/typeorm",
+	"version": "1.0.0",
+	"description": "Base structure with reusable classes to create CRUD modules for typeorm using abstraction in entities, repositories, services, controllers and routes.",
+	"main": "index.js",
+	"scripts": {
+		"test": "vitest",
+		"lint": "biome check --write",
+		"build": "tsc -p tsconfig.json"
+	},
+	"keywords": ["abstraction", "crud", "lib", "reusable", "typeorm"],
+	"author": "Matheus Ferreira",
+	"license": "MIT",
+	"peerDependencies": {
+		"typeorm": "^0.3.24",
+		"reflect-metadata": "^0.2.2"
+	}
+}
