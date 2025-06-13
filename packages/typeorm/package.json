@@ -13,6 +13,7 @@
 	"license": "MIT",
 	"peerDependencies": {
 		"typeorm": "^0.3.24",
-		"reflect-metadata": "^0.2.2"
+		"reflect-metadata": "^0.2.2",
+		"express": "^5.1.0"
 	}
 }
