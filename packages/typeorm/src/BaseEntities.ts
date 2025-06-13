@@ -1,33 +1,33 @@
 import {
-	PrimaryGeneratedColumn,
 	CreateDateColumn,
+	PrimaryGeneratedColumn,
 	UpdateDateColumn,
 } from "typeorm";
 
 abstract class BaseEntity {
 	@CreateDateColumn()
-	createdAt!: Date;
+	createdAt: Date;
 
 	@UpdateDateColumn()
-	updatedAt!: Date;
+	updatedAt: Date;
 }
 
 export abstract class IncrementEntity extends BaseEntity {
 	@PrimaryGeneratedColumn()
-	id!: number;
+	id: number;
 }
 
 export abstract class UuidEntity extends BaseEntity {
 	@PrimaryGeneratedColumn("uuid")
-	id!: string;
+	id: string;
 }
 
 export abstract class RowIdEntity extends BaseEntity {
 	@PrimaryGeneratedColumn("rowid")
-	id!: number;
+	id: number;
 }
 
 export abstract class IdentityEntity extends BaseEntity {
 	@PrimaryGeneratedColumn("identity")
-	id!: number;
+	id: number;
 }
