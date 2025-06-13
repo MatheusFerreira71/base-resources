@@ -1,2 +1,2 @@
-export * from "./BaseEntities";
-export * from "./BaseRepository";
+export * from "./resources/BaseEntities";
+export * from "./resources/BaseRepository";

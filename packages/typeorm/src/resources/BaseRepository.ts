@@ -1,6 +1,6 @@
 import type { DeepPartial, FindOptionsWhere, Repository } from "typeorm";
-import type { TBaseEntity } from "./types/entities.types";
 import type { QueryDeepPartialEntity } from "typeorm/query-builder/QueryPartialEntity";
+import type { TBaseEntity } from "../types/entities.types";
 
 export abstract class BaseRepository<
 	T extends TBaseEntity,
