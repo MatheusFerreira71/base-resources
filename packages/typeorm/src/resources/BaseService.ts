@@ -13,8 +13,14 @@ export abstract class BaseService<
 		return await this.repository.findAll();
 	}
 
-	public async findOne(id: T["id"]): Promise<T | null> {
-		return await this.repository.findOne(id);
+	public async findOne(id: T["id"]): Promise<T> {
+		const payload = await this.repository.findOne(id);
+
+		if (!payload) {
+			throw new Error(`Entity with id ${id} not found`);
+		}
+
+		return payload;
 	}
 
 	public async create(data: DTO): Promise<T> {
@@ -24,8 +30,14 @@ export abstract class BaseService<
 	public async update(
 		id: T["id"],
 		data: QueryDeepPartialEntity<T>,
-	): Promise<T | null> {
-		return await this.repository.update(id, data);
+	): Promise<T> {
+		const updatedEntity = await this.repository.update(id, data);
+
+		if (!updatedEntity) {
+			throw new Error(`Entity with id ${id} not found`);
+		}
+
+		return updatedEntity;
 	}
 
 	public async delete(id: T["id"]): Promise<void> {

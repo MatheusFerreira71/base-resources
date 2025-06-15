@@ -29,6 +29,7 @@
 	"homepage": "https://github.com/MatheusFerreira71/base-resources#readme",
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
+		"@types/express": "^5.0.3",
 		"@types/node": "^24.0.1",
 		"express": "^5.1.0",
 		"reflect-metadata": "^0.2.2",
