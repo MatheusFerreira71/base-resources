@@ -15,12 +15,11 @@ export abstract class BaseRouter<
 		router: Router,
 	) {
 		this.router = router;
-		this.router.use(this.prefix);
 
-		this.router.get("/", this.controller.findAll);
-		this.router.get("/:id", this.controller.findOne);
-		this.router.post("/", this.controller.create);
-		this.router.put("/", this.controller.update);
-		this.router.delete("/:id", this.controller.delete);
+		this.router.get(`${prefix}/`, this.controller.findAll);
+		this.router.get(`${prefix}/:id`, this.controller.findOne);
+		this.router.post(`${prefix}/`, this.controller.create);
+		this.router.put(`${prefix}/`, this.controller.update);
+		this.router.delete(`${prefix}/:id`, this.controller.delete);
 	}
 }
