@@ -3,7 +3,7 @@ import type { TBaseEntity } from "../types/entities.types";
 import type { BaseController } from "./BaseController";
 import type { Router } from "express";
 
-export default abstract class BaseRouter<
+export abstract class BaseRouter<
 	T extends TBaseEntity,
 	DTO extends DeepPartial<T> = DeepPartial<T>,
 > {
